@@ -13,10 +13,11 @@ El siguiente repositorio responde a la prueba tecnica otorgada por 360 software 
 7. Tener instalada la extension de live server
 8. ubicarse en el archivo index.html
 9. Activar "Go live" en el panel inferior derecho de la pantalla
-![referencia go live](image.png)
+![referencia go live](src/img/image.png)
 
 !!Listo ya se encuentra completamente funcional el proyecto y se visualiza de la siguiente manera
-![proyecto](image-1.png)
+
+![proyecto](src/img/image-1.png)
 
 **NOTA**
 es importante saber que para visualizar el frontend debe subir el servicion backend primero , de lo contrario no visualizara nada
