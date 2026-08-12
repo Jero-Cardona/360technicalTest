@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta de Productos y Pedidos</title>
+    <title>Test Tecnico - Jeronimo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="src/tailwind.js"></script>
 </head>
@@ -15,7 +15,6 @@
 
         <!-- Header -->
         <header class="mb-8 border-b border-line pb-6">
-            <p class="text-accent text-xs tracking-widest uppercase mb-1">/consulta</p>
             <h1 class="text-2xl text-slate-50 font-semibold">Buscador de productos y pedidos</h1>
             <p class="text-slate-400 text-sm mt-2">Selecciona una categoría, envía el valor y recibe el resultado del
                 endpoint.</p>
@@ -24,7 +23,7 @@
         <!-- Panel de formulario -->
         <section class="bg-panel border border-line rounded-lg p-5">
 
-            <label class="block text-xs uppercase tracking-wide text-slate-400 mb-2" for="categoria">Categoría</label>
+            <label class="block text-ms uppercase tracking-wide text-slate-400 mb-2" for="categoria">Categoría</label>
             <select id="categoria"
                 class="w-full bg-ink border border-line rounded-md px-3 py-2.5 text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent/60">
                 <option value="">— selecciona —</option>
@@ -34,15 +33,15 @@
 
             <!-- Bloque productos -->
             <div id="bloque-productos" class="hidden mt-4">
-                <label class="block text-xs uppercase tracking-wide text-slate-400 mb-2" for="target_value">Dato del
+                <label class="block text-sm uppercase tracking-wide text-slate-400 mb-2" for="target_value">Dato del
                     producto a buscar</label>
-                <input type="text" id="target_value" placeholder="ej. camisa azul manga larga"
+                <input type="text" id="target_value" placeholder="ej. Panel Redondo"
                     class="w-full bg-ink border border-line rounded-md px-3 py-2.5 text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-accent/60">
             </div>
 
             <!-- Bloque pedidos -->
             <div id="bloque-pedidos" class="hidden mt-4">
-                <label class="block text-xs uppercase tracking-wide text-slate-400 mb-2" for="cliente">Cliente</label>
+                <label class="block text-sm uppercase tracking-wide text-slate-400 mb-2" for="cliente">Cliente</label>
                 <select id="cliente"
                     class="w-full bg-ink border border-line rounded-md px-3 py-2.5 text-slate-100 focus:outline-none focus:ring-2 focus:ring-accent/60">
                     <option value="">cargando clientes...</option>
@@ -50,7 +49,7 @@
             </div>
 
             <button id="btn-consultar"
-                class="mt-5 w-full bg-accent text-ink font-semibold rounded-md py-2.5 hover:bg-teal-300 active:scale-[0.99] transition">
+                class="mt-5 w-full bg-accent text-ink font-semibold rounded-md py-2.5 hover:bg-teal-500 active:scale-[0.99] transition">
                 Consultar
             </button>
 
@@ -58,7 +57,7 @@
 
         <!-- Resultado -->
         <section class="mt-6">
-            <p class="text-xs uppercase tracking-wide text-slate-500 mb-2">Respuesta</p>
+            <p class="text-sm uppercase tracking-wide text-slate-500 mb-2">Respuesta</p>
             <pre id="resultado"
                 class="bg-panel border border-line rounded-lg p-4 text-sm text-slate-300 min-h-[3rem] whitespace-pre-wrap break-words">— sin consultas aún —</pre>
         </section>

@@ -25,7 +25,6 @@ def get_producto(categoria: str, target_value: str):
         response = conver_data_pedidos(tar_value)
     else:
         response = {'error': "Categoria debe ser 'productos' o 'pedidos'. "}
-    
     return response
 
 # endpoitn de consulta de clientes
@@ -34,7 +33,7 @@ def get_clientes():
     
     # leer dataframe pedidos
     df_pedidos = pd.read_excel(path_pedidos)
-    clients =  df_pedidos['codvend'].astype(str).to_list()
+    clients =  df_pedidos['nitcli'].astype(str).to_list()
     
     # limpiar lista y valores duplicados
     clients_array = []    
