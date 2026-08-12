@@ -3,10 +3,9 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-PATH_SRC = os.path.join(os.getcwd(), "src/")
+PATH_SRC = os.path.join(os.getcwd(), "app/media/")
 path_productos = os.path.join(PATH_SRC, "data_productos.xlsx")
 path_pedidos = os.path.join(PATH_SRC, "data_pedidos.xlsx")
-
 
 COL_DESCRIPCION_PRODUCTO = "descripcion"
 COL_PRODUCTO_PEDIDO = "producto"

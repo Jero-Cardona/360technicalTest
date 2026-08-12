@@ -5,7 +5,7 @@ from data import conver_data_pedidos, conver_data_productos, path_pedidos, pd
 app = FastAPI()
 
 # Habilitar cors para consultar a la API desde el front
-app.middleware(
+app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_methods=["*"],
