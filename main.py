@@ -1,11 +1,16 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from data import conver_data_pedidos, conver_data_productos, path_pedidos, pd
 
 app = FastAPI()
 
-# @app.get('/')
-# def get_root():
-#     return {'Hellow': 'World'}
+# Habilitar cors para consultar a la API desde el front
+app.middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # construccion de endpoint principal
 @app.get('/consulta/{categoria}/{target_value}', tags=['Productos'])
@@ -16,9 +21,12 @@ def get_producto(categoria: str, target_value: str):
     
     if cat_value == 'productos':
         response = conver_data_productos(tar_value)
-    
-    if cat_value == 'pedidos':
+    elif cat_value == 'pedidos':
         response = conver_data_pedidos(tar_value)
+    else:
+        response = {'error': "Categoria debe ser 'productos' o 'pedidos'. "}
+    
+    return response
 
 # endpoitn de consulta de clientes
 @app.get('/clientes')
@@ -33,6 +41,7 @@ def get_clientes():
     for c in clients:
         if c not in clients_array:
             clients_array.append(c)
+
     return clients_array
 
 
